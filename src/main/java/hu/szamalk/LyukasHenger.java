@@ -21,5 +21,6 @@ public class LyukasHenger extends TomorHenger{
         return "LyukasHenger{" +
                 "falvastagsag=" + falvastagsag +
                 '}';
+
     }
 }
