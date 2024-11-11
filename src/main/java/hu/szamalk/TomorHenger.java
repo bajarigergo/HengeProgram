@@ -28,6 +28,6 @@ public class TomorHenger extends MertaniHenger{
         this.fajsuly = fajsuly;
     }
     public double suly(){
-        return terfogat() * fajsuly;
+        return this.terfogat() * fajsuly;
     }
 }

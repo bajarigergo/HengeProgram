@@ -14,7 +14,12 @@ public class LyukasHenger extends TomorHenger{
     }
 
     public double terfogat(){
-        return 0.0;
+        double sugarTortenet = this.getSugar();
+        setSugar(this.getSugar()-falvastagsag);
+        double belso = super.terfogat();
+        setSugar(sugarTortenet);
+
+        return super.terfogat()-belso;
     }
     @Override
     public String toString() {

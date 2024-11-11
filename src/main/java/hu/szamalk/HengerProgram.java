@@ -8,12 +8,16 @@ public class HengerProgram {
     private List<MertaniHenger> hengerek;
 
     public HengerProgram() {
+        TomorHenger t = new TomorHenger(2,1,1);
+        LyukasHenger ly = new LyukasHenger(2,1,1,2);
         hengerek = new ArrayList<>();
-        hengerek.add(new MertaniHenger(1,1));
+        hengerek.add(t);
+        hengerek.add(ly);
+        /*hengerek.add(new MertaniHenger(1,1));
         hengerek.add(new TomorHenger(1,1,2));
         hengerek.add(new LyukasHenger(1,1,1,1));
-        hengerek.add(new LyukasHenger(1,1,1,.5));
-        hengerek.add(new LyukasHenger(1,1,1,.9));
+        hengerek.add(new LyukasHenger(1,1,1,.5));*/
+        //hengerek.add(new LyukasHenger(4,1,1,2));
 
         //for (MertaniHenger henger : hengerek){
         //    System.out.println(henger);
@@ -23,7 +27,9 @@ public class HengerProgram {
         }
         System.out.println("Hengerek átlagtérfogata: "+ this.atlagTerfogat());
 
-        System.out.println("Hengerek átlagtérsúlya: "+ this.csovekSulya());
+        System.out.println("súly: " + t.suly());
+
+        System.out.println("Csövek súlya: "+ ly.suly());
 
     }
 

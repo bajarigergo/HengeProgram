@@ -40,4 +40,7 @@ public class MertaniHenger {
                 ", magassag=" + magassag +
                 '}';
     }
+    protected void csokkentHengerDarab(){
+        hengerDarab--;
+    }
 }
