@@ -28,10 +28,20 @@ public class HengerProgram {
     }
 
     public double atlagTerfogat() {
-        return 0.0;
+    double terfogatOsszes = 0;
+    for (MertaniHenger henger : this.lista()) {
+            terfogatOsszes += henger.terfogat();
+        }
+    return terfogatOsszes / (doubl) MertaniHenger.getHengerDarab();
     }
     public double csovekSulya() {
-        return 0.0;
+        double osszTomeg = 0;
+        for (MertaniHenger henger : this.lista()) {
+            if (henger.getClass()==LyukasHenger.class){
+                osszTomeg += henger.terfogat()*((LyukasHenger) henger).getFajsuly();
+            }
+        }
+        return osszTomeg;
     }
     private List<MertaniHenger> lista(){
         return hengerek;
