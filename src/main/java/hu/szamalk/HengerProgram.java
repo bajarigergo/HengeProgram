@@ -9,8 +9,8 @@ public class HengerProgram {
 
     public HengerProgram() {
         hengerek = new ArrayList<>();
-        hengerek.add(new MertaniHenger(3,3));
-        hengerek.add(new TomorHenger(3,3,2));
+        hengerek.add(new MertaniHenger(1,1));
+        hengerek.add(new TomorHenger(1,1,2));
         hengerek.add(new LyukasHenger(1,1,1,1));
         hengerek.add(new LyukasHenger(1,1,1,.5));
         hengerek.add(new LyukasHenger(1,1,1,.9));
@@ -32,13 +32,13 @@ public class HengerProgram {
     for (MertaniHenger henger : this.lista()) {
             terfogatOsszes += henger.terfogat();
         }
-    return terfogatOsszes / (doubl) MertaniHenger.getHengerDarab();
+    return terfogatOsszes / (double) MertaniHenger.getHengerDarab();
     }
     public double csovekSulya() {
         double osszTomeg = 0;
         for (MertaniHenger henger : this.lista()) {
-            if (henger.getClass()==LyukasHenger.class){
-                osszTomeg += henger.terfogat()*((LyukasHenger) henger).getFajsuly();
+            if (henger instanceof LyukasHenger){
+                osszTomeg += ((LyukasHenger) henger).suly();
             }
         }
         return osszTomeg;
