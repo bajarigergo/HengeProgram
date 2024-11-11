@@ -5,11 +5,12 @@ public class MertaniHenger {
     private double sugar, magassag;
 
     public MertaniHenger(double sugar, double magassag) {
+        MertaniHenger.hengerDarab++;
         this.sugar = sugar;
         this.magassag = magassag;
     }
 
-    public int getHengerDarab() {
+    public static int getHengerDarab() {
         return hengerDarab;
     }
 
@@ -35,8 +36,7 @@ public class MertaniHenger {
     @Override
     public String toString() {
         return "MertaniHenger{" +
-                "hengerDarab=" + hengerDarab +
-                ", sugar=" + sugar +
+                "sugar=" + sugar +
                 ", magassag=" + magassag +
                 '}';
     }
